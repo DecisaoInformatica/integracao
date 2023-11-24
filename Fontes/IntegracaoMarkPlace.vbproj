@@ -1,0 +1,373 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{0466A699-528A-4F75-A01B-739FBDC82379}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>IntegracaoMarkPlace.My.MyApplication</StartupObject>
+    <RootNamespace>IntegracaoMarkPlace</RootNamespace>
+    <AssemblyName>IntegracaoMarkPlace</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>C:\ProjetoNet\IntegracaoMarkPlace\Instalador\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Unc</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <InstallUrl>\\192.168.0.100\Atualizacao\Instalacao\</InstallUrl>
+    <ApplicationRevision>2</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>IntegracaoMarkPlace.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>IntegracaoMarkPlace.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>AD9D80B46FA958A76F54716666120A5DFC8357D2</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>IntegracaoMarkPlace_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>networking.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=7.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.AsyncInterfaces.7.0.0\lib\net462\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.WebView2.Core, Version=1.0.2045.28, Culture=neutral, PublicKeyToken=2a8ab48044d2601e, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Web.WebView2.1.0.2045.28\lib\net45\Microsoft.Web.WebView2.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.WebView2.WinForms, Version=1.0.2045.28, Culture=neutral, PublicKeyToken=2a8ab48044d2601e, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Web.WebView2.1.0.2045.28\lib\net45\Microsoft.Web.WebView2.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.WebView2.Wpf, Version=1.0.2045.28, Culture=neutral, PublicKeyToken=2a8ab48044d2601e, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Web.WebView2.1.0.2045.28\lib\net45\Microsoft.Web.WebView2.Wpf.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data">
+      <HintPath>..\..\AcessoDados\bin\Debug\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="RestSharp, Version=110.2.0.0, Culture=neutral, PublicKeyToken=598062e77f915f75, processorArchitecture=MSIL">
+      <HintPath>..\packages\RestSharp.110.2.0\lib\netstandard2.0\RestSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Memory, Version=4.0.1.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.4.5.5\lib\net461\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.6.0.0\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Encodings.Web, Version=7.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Text.Encodings.Web.7.0.0\lib\net462\System.Text.Encodings.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Json, Version=7.0.0.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Text.Json.7.0.2\lib\net462\System.Text.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Threading.Tasks.Extensions.4.5.4\lib\net461\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ValueTuple.4.5.0\lib\net461\System.ValueTuple.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ApplicationEvents.vb" />
+    <Compile Include="Classes\util.vb" />
+    <Compile Include="ControleProdutos\ControleProdutos.vb" />
+    <Compile Include="ControleProdutos\ControleProdutoShopee.vb" />
+    <Compile Include="ControleToken\Controle_Token.vb" />
+    <Compile Include="ControleToken\Controle_Token_Shopee.vb" />
+    <Compile Include="Dao\AdoCidade.vb" />
+    <Compile Include="Dao\DAOVendedor.vb" />
+    <Compile Include="Dao\DAOVenda.vb" />
+    <Compile Include="Dao\DAOCliente.vb" />
+    <Compile Include="Dao\DAOConfiguracao.vb" />
+    <Compile Include="Dao\DAOProduto.vb" />
+    <Compile Include="Fabrica\Cliente\ClienteBHForte.vb" />
+    <Compile Include="Fabrica\Cliente\FabricaCliente.vb" />
+    <Compile Include="Fabrica\Cliente\ClienteScae.vb" />
+    <Compile Include="Fabrica\Configuracao\FabricaConfiguracao.vb" />
+    <Compile Include="Fabrica\ProdutoIntegracao\FabricaProdutoIntegracao.vb" />
+    <Compile Include="Fabrica\ProdutoIntegracao\ProdutoIntegracaoScae.vb" />
+    <Compile Include="Fabrica\Produto\ProdutoScae.vb" />
+    <Compile Include="Dao\DAOProdutoIntegracao.vb" />
+    <Compile Include="Fabrica\Configuracao\Configuracao.vb" />
+    <Compile Include="ControleAcesso\Controle_Acesso.vb" />
+    <Compile Include="ControleAcesso\Crontrole_Acesso_Shopee.vb" />
+    <Compile Include="Fabrica\Token\TokenConfig.vb" />
+    <Compile Include="Dao\DAOTokenConfig.vb" />
+    <Compile Include="Fabrica\Produto\FabricaProduto.vb" />
+    <Compile Include="Fabrica\Token\FabricaTokenConfig.vb" />
+    <Compile Include="Fabrica\Venda\FabricaVenda.vb" />
+    <Compile Include="Fabrica\Venda\VendaBHForte.vb" />
+    <Compile Include="Fabrica\Venda\VendaScae.vb" />
+    <Compile Include="Fabrica\Vendedor\VendedorBHForte.vb" />
+    <Compile Include="Fabrica\Vendedor\VendedorScae.vb" />
+    <Compile Include="Fabrica\Vendedor\FabricaVendedor.vb" />
+    <Compile Include="Formularios\FrmAutorizacao.Designer.vb">
+      <DependentUpon>FrmAutorizacao.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\FrmAutorizacao.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FrmCadastroCliente.designer.vb">
+      <DependentUpon>FrmCadastroCliente.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\FrmCadastroCliente.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FrmConfiguração.Designer.vb">
+      <DependentUpon>FrmConfiguração.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\FrmConfiguração.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FrmPedido.Designer.vb">
+      <DependentUpon>FrmPedido.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\FrmPedido.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FrmPrincipal.Designer.vb">
+      <DependentUpon>FrmPrincipal.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\FrmPrincipal.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FrmProdutoNfe.designer.vb">
+      <DependentUpon>FrmProdutoNfe.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\FrmProdutoNfe.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FrmProdutos.Designer.vb">
+      <DependentUpon>FrmProdutos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\FrmProdutos.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FrmToken.Designer.vb">
+      <DependentUpon>FrmToken.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\FrmToken.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\ListagemProduto.designer.vb">
+      <DependentUpon>ListagemProduto.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\ListagemProduto.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interface\I_Venda.vb" />
+    <Compile Include="Interface\I_Vendedor.vb" />
+    <Compile Include="Interface\I_ProdutoIntegracao.vb" />
+    <Compile Include="Interface\I_Token.vb" />
+    <Compile Include="Interface\I_Configuracao.vb" />
+    <Compile Include="Interface\I_Cliente.vb" />
+    <Compile Include="Interface\I_Produto.vb" />
+    <Compile Include="Interface\I_Controle_Acesso_Strategy.vb" />
+    <Compile Include="Interface\I_Controle_Token_Strategy.vb" />
+    <Compile Include="Interface\I_Pedido_Strategy.vb" />
+    <Compile Include="Interface\I_Produto_Strategy.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Pedido\Controle_Pedido.vb" />
+    <Compile Include="Pedido\Controle_Pedido_Shopee.vb" />
+    <Compile Include="Percistencia\Cidade.vb" />
+    <Compile Include="Percistencia\BaseAtualização.vb" />
+    <Compile Include="Percistencia\ConfiguracaoIntegracao.vb" />
+    <Compile Include="Percistencia\PVenda.vb" />
+    <Compile Include="Percistencia\PVendedor.vb" />
+    <Compile Include="Percistencia\Pedido.vb" />
+    <Compile Include="Percistencia\Cliente.vb" />
+    <Compile Include="Percistencia\Produto.vb" />
+    <Compile Include="Percistencia\PProdutoIntegracao.vb" />
+    <Compile Include="Percistencia\ProdutosExibir.vb" />
+    <Compile Include="Percistencia\ProdutoShopee.vb" />
+    <Compile Include="Percistencia\ResumoPedido.vb" />
+    <Compile Include="Percistencia\Resumo_Item_Produtos.vb" />
+    <Compile Include="Percistencia\Token.vb" />
+    <Compile Include="Percistencia\VendaCabecalho.vb" />
+    <Compile Include="Percistencia\VendaDados.vb" />
+    <Compile Include="Utilitário.vb" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Formularios\FrmAutorizacao.resx">
+      <DependentUpon>FrmAutorizacao.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FrmCadastroCliente.resx">
+      <DependentUpon>FrmCadastroCliente.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FrmConfiguração.resx">
+      <DependentUpon>FrmConfiguração.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FrmPedido.resx">
+      <DependentUpon>FrmPedido.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FrmPrincipal.resx">
+      <DependentUpon>FrmPrincipal.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FrmProdutoNfe.resx">
+      <DependentUpon>FrmProdutoNfe.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FrmProdutos.resx">
+      <DependentUpon>FrmProdutos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FrmToken.resx">
+      <DependentUpon>FrmToken.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\ListagemProduto.resx">
+      <DependentUpon>ListagemProduto.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="IntegracaoMarkPlace_TemporaryKey.pfx" />
+    <None Include="My Project\app.manifest" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="DDL\Tabelas.sql" />
+    <Content Include="networking.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.6.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.6.2 %28x86 e x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\AcessoDados\AcessoDados.vbproj">
+      <Project>{82e72c0c-1842-4315-a43f-9cc2f0a1e6d3}</Project>
+      <Name>AcessoDados</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <Import Project="..\packages\Microsoft.Web.WebView2.1.0.2045.28\build\Microsoft.Web.WebView2.targets" Condition="Exists('..\packages\Microsoft.Web.WebView2.1.0.2045.28\build\Microsoft.Web.WebView2.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Este projeto faz referência a pacotes do NuGet que não estão presentes neste computador. Use a Restauração de Pacotes do NuGet para baixá-los.  Para obter mais informações, consulte http://go.microsoft.com/fwlink/?LinkID=322105. O arquivo ausente é {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Web.WebView2.1.0.2045.28\build\Microsoft.Web.WebView2.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Web.WebView2.1.0.2045.28\build\Microsoft.Web.WebView2.targets'))" />
+  </Target>
+</Project>

@@ -1,0 +1,310 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+AcessoDados
+</name>
+</assembly>
+<members>
+<member name="T:AcessoDados.My.Resources.Resources">
+<summary>
+  Uma classe de recurso de tipo de alta segurança, para pesquisar cadeias de caracteres localizadas etc.
+</summary>
+</member>
+<member name="P:AcessoDados.My.Resources.Resources.ResourceManager">
+<summary>
+  Retorna a instância de ResourceManager armazenada em cache usada por essa classe.
+</summary>
+</member>
+<member name="P:AcessoDados.My.Resources.Resources.Culture">
+<summary>
+  Substitui a propriedade CurrentUICulture do thread atual para todas as
+  pesquisas de recursos que usam essa classe de recurso de tipo de alta segurança.
+</summary>
+</member>
+<member name="P:AcessoDados.AcessoAdoNet.TipoBanco">
+ <summary>
+ Determina o tipo de banco de dados que será usado. Caso não informado, será usado MySql.
+ </summary>
+</member>
+<member name="P:AcessoDados.AcessoAdoNet.StringAcesso">
+ <summary>
+ Retorna a String de conexão com o banco de dados.
+ </summary>
+</member>
+<member name="P:AcessoDados.AcessoAdoNet.Servidor">
+ <summary>
+ O Servidor que armazena o banco de dados. Em caso de access, não precisa informar este valor.
+ </summary>
+</member>
+<member name="P:AcessoDados.AcessoAdoNet.BancoDados">
+ <summary>
+ Informa o nome do banco de dados. Caso seja access, deve ser informado o nome com o caminho completo.
+ </summary>
+</member>
+<member name="P:AcessoDados.AcessoAdoNet.Usuario">
+ <summary>
+ O usuario de acesso ao banco de dados.
+ </summary>
+</member>
+<member name="P:AcessoDados.AcessoAdoNet.NomeProjeto">
+ <summary>
+ A senha para acesso ao Banco de dados.
+ </summary>
+ <summary>
+ Informe o nome do projeto. Em Net basta Informar cl.NomeProjeto=ProductName.
+ </summary>
+</member>
+<member name="M:AcessoDados.AcessoAdoNet.ObtemDataAdapter(System.String)">
+ <summary>
+ Retorna o DataAdapter para a conexão com o banco de dados.
+ </summary>
+</member>
+<member name="M:AcessoDados.AcessoAdoNet.ObtemDataset(System.String,System.String)">
+ <summary>
+ Retorna um DataSet preenchido.
+ </summary>
+</member>
+<member name="M:AcessoDados.AcessoAdoNet.ObtemDataRead(System.String)">
+ <summary>
+ Retorna um DataRead.
+ </summary>
+</member>
+<member name="M:AcessoDados.AcessoAdoNet.AbrirFormConfig">
+ <summary>
+ Abre o formulário para configurar o banco de dados.
+ </summary>
+</member>
+<member name="M:AcessoDados.AcessoAdoNet.ExecutaSql(System.String,System.Boolean,System.Int64@)">
+ <summary>
+ Executa Ações de Insert e Update na Base de dados.
+ </summary>
+</member>
+<member name="M:AcessoDados.AcessoAdoNet.LerConfiguracao">
+ <summary>
+ Ler as configurações de acesso ao banco de dados e expõe nas propriedades da classe.
+ </summary>
+</member>
+<member name="P:AcessoDados.AcessoDadosST.TipoBanco">
+ <summary>
+ Determina o tipo de banco de dados que será usado. Caso não informado, será usado MySql.
+ </summary>
+</member>
+<member name="P:AcessoDados.AcessoDadosST.StringAcesso">
+ <summary>
+ Retorna a String de conexão com o banco de dados.
+ </summary>
+</member>
+<member name="P:AcessoDados.AcessoDadosST.Servidor">
+ <summary>
+ O Servidor que armazena o banco de dados. Em caso de access, não precisa informar este valor.
+ </summary>
+</member>
+<member name="P:AcessoDados.AcessoDadosST.BancoDados">
+ <summary>
+ Informa o nome do banco de dados. Caso seja access, deve ser informado o nome com o caminho completo.
+ </summary>
+</member>
+<member name="P:AcessoDados.AcessoDadosST.Usuario">
+ <summary>
+ O usuario de acesso ao banco de dados.
+ </summary>
+</member>
+<member name="P:AcessoDados.AcessoDadosST.NomeProjeto">
+ <summary>
+ A senha para acesso ao Banco de dados.
+ </summary>
+ <summary>
+ Informe o nome do projeto. Em Net basta Informar cl.NomeProjeto=ProductName.
+ </summary>
+</member>
+<member name="M:AcessoDados.AcessoDadosST.ObtemDataAdapter(System.String)">
+ <summary>
+ Retorna o DataAdapter para a conexão com o banco de dados.
+ </summary>
+</member>
+<member name="M:AcessoDados.AcessoDadosST.ObtemDataset(System.String,System.String)">
+ <summary>
+ Retorna um DataSet preenchido.
+ </summary>
+</member>
+<member name="M:AcessoDados.AcessoDadosST.ObtemDataRead(System.String)">
+ <summary>
+ Retorna um DataRead.
+ </summary>
+</member>
+<member name="M:AcessoDados.AcessoDadosST.AbrirFormConfig">
+ <summary>
+ Abre o formulário para configurar o banco de dados.
+ </summary>
+</member>
+<member name="M:AcessoDados.AcessoDadosST.ExecutaSql(System.String,System.Boolean,System.Int64@)">
+ <summary>
+ Executa Ações de Insert e Update na Base de dados.
+ </summary>
+</member>
+<member name="M:AcessoDados.AcessoDadosST.LerConfiguracao">
+ <summary>
+ Ler as configurações de acesso ao banco de dados e expõe nas propriedades da classe.
+ </summary>
+</member>
+<member name="F:AcessoDados.ControleFormulario.ArrayCampoformulario">
+ <summary>
+ Representa a Lista Nescessaria
+ </summary>
+</member>
+<member name="P:AcessoDados.ControleFormulario.PosicaoRegistro">
+ <summary>
+ Informa um inteiro com o número da posição do registro no dataset.
+ </summary>
+</member>
+<member name="P:AcessoDados.ControleFormulario.PosicaoUltimoRegistro">
+ <summary>
+ Informa quantos registros tem no dataset.
+ </summary>
+</member>
+<member name="P:AcessoDados.ControleFormulario.DataSete">
+ <summary>
+ O datasete que será usado para controle dos dados.
+ </summary>
+</member>
+<member name="P:AcessoDados.ControleFormulario.NomeIndice">
+ <summary>
+ Qual o nome do Índice principal. Por padrão será Codigo.
+ </summary>
+</member>
+<member name="P:AcessoDados.ControleFormulario.ListaCamposRequeridos">
+ <summary>
+ Este Campo deve Receber um campo ArrayList com os nomes dos campos que srão obrigatório de preenchimento no formulário.
+ </summary>
+ <value>nothing</value>
+</member>
+<member name="P:AcessoDados.ControleFormulario.FormAtual">
+ <summary>
+ Informe o formulário que será usado. Normalmente seta com a variavel Me. Ex: cl.formAtual=Me
+ </summary>
+</member>
+<member name="P:AcessoDados.ControleFormulario.CampoPadraoPesquisa">
+ <summary>
+ O nome do Padrão deve ser igual ao nome que será Exibo. Igual ao do label.
+ </summary>
+</member>
+<member name="P:AcessoDados.ControleFormulario.CampoOrdem">
+ <summary>
+ Determina Qual o Campo que esta ordenando o Formulário. Deve ter o nome que esta no Label.
+ </summary>
+</member>
+<member name="M:AcessoDados.ControleFormulario.Salvar(System.Boolean)">
+ <summary>
+ Salva os registros do Fomulário. Efetua a atualização ou insersão dos Dados.
+ </summary>
+</member>
+<member name="M:AcessoDados.ControleFormulario.ObtemNomeExibir(System.String)">
+ <summary>
+ Devolve o nome que será exibido na campo para pesquisa.
+ </summary>
+</member>
+<member name="M:AcessoDados.ControleFormulario.ExibeDados">
+ <summary>
+ Preenche o formulário de registros.
+ </summary>
+</member>
+<member name="M:AcessoDados.ControleFormulario.CampoRequerido(System.String)">
+ <summary>
+ Retorna True Se todos os campos estão Ok. e False se a Validação Falou
+ </summary>
+ <returns>Boolean</returns>
+ 
+</member>
+<member name="M:AcessoDados.ControleFormulario.ValidaCampos">
+ <summary>
+ Efetua a validação dos dados do formulário. Verifica se os dados são coerentes. Se estiver no array de Requerido, Critica se deve ser preenchido.
+ </summary>
+</member>
+<member name="M:AcessoDados.ControleFormulario.Pesquisa">
+ <summary>
+ Efetua a Pesquisa dos Registros.
+ </summary>
+</member>
+<member name="M:AcessoDados.Criptografia.Criptografar(System.String)">
+ <summary>
+ Efetua a Criptografia da Variavel
+ </summary>
+ <param name="StrString"></param>
+</member>
+<member name="M:AcessoDados.Criptografia.DesCriptografar(System.String)">
+ <summary>
+ Efetua a Descriptografia.
+ </summary>
+ <param name="StrString"></param>
+</member>
+<member name="T:AcessoDados.ProcessaArquivosIni">
+ <summary>
+ Efetua a operação de leitura e escrita no arquivo ini.
+ </summary>
+</member>
+<member name="M:AcessoDados.ProcessaArquivosIni.Leini(System.String,System.String,System.String,System.Boolean)">
+ <summary>
+ Efetua a Leitura do arquivo ini, e retorna o parametro especifico.
+ </summary>
+ <param name="NomeArquivo"></param>
+ <param name="Chave"></param>
+ <param name="Secao"></param>
+ 
+</member>
+<member name="M:AcessoDados.ProcessaArquivosIni.GravaIni(System.String,System.String,System.String,System.String,System.Boolean)">
+ <summary>
+ Efetua a Gravação do Arquivo ini
+ </summary>
+ <param name="NomeArquivo"></param>
+ <param name="Valor"></param>
+ <param name="Chave"></param>
+ <param name="Secao"></param>
+</member>
+<member name="M:AcessoDados.Utilitarios.AcertaSql(System.String)">
+ <summary>
+ Efetua o Acerto da String de SQL para acesso ao tipo de banco de dados escolhido.
+ </summary>
+</member>
+<member name="M:AcessoDados.Utilitarios.DirWinSystem">
+ <summary>
+ Retorna o Diretorio do Sytem32 do Windows.
+ </summary>
+</member>
+<member name="M:AcessoDados.Utilitarios.NomeArquivoIni">
+ <summary>
+ Recebe o Nome do arquivo INI que será trabalhado.
+ </summary>
+</member>
+<member name="M:AcessoDados.Utilitarios.ColocaPontoCPf(System.String)">
+ <summary>
+ Formata o CPF
+ </summary>
+</member>
+<member name="M:AcessoDados.Utilitarios.ColocaPontoCnpj(System.String)">
+ <summary>
+ Formata o CNPJ
+ </summary>
+</member>
+<member name="M:AcessoDados.Utilitarios.ColocaPontoCep(System.String)">
+ <summary>
+ Formata o CEP
+ </summary>
+</member>
+<member name="M:AcessoDados.Utilitarios.ValidaCNPJ(System.String)">
+ <summary>
+ Efetua a Validação do CNPJ
+ </summary>
+</member>
+<member name="M:AcessoDados.Utilitarios.ValidaCPF(System.String)">
+ <summary>
+ ValidaCPF
+ </summary>
+</member>
+<member name="M:AcessoDados.Utilitarios.ValidaIscricaoEstadual(System.String,System.String)">
+ <summary>
+ Valida a Inscrição Estadual
+ </summary>
+</member>
+</members>
+</doc>
