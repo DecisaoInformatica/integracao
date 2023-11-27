@@ -22,17 +22,18 @@ Partial Class FrmPedido
     'Não o modifique usando o editor de códigos.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle9 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle10 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle11 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle12 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle9 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle10 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle11 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmPedido))
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Plataforma = New System.Windows.Forms.ComboBox()
@@ -41,15 +42,6 @@ Partial Class FrmPedido
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Status = New System.Windows.Forms.ComboBox()
         Me.GridCabecalho = New System.Windows.Forms.DataGridView()
-        Me.Selecionar = New System.Windows.Forms.DataGridViewCheckBoxColumn()
-        Me.PedidoGerado = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.TxtIDLoja = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.TxtEmissao = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.TXTCliente = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.TxtCPF = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.TxtFormaPag = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.TXTValor = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ChaveAcesso = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.GridItem = New System.Windows.Forms.DataGridView()
         Me.TxtItem = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.TXTCodigo = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -66,6 +58,15 @@ Partial Class FrmPedido
         Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
         Me.DataInicio = New System.Windows.Forms.MaskedTextBox()
         Me.DataFim = New System.Windows.Forms.MaskedTextBox()
+        Me.Selecionar = New System.Windows.Forms.DataGridViewCheckBoxColumn()
+        Me.PedidoGerado = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.TxtIDLoja = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.TxtEmissao = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.TXTCliente = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.TxtCPF = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.TxtFormaPag = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.TXTValor = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ChaveAcesso = New System.Windows.Forms.DataGridViewTextBoxColumn()
         CType(Me.GridCabecalho, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.GridItem, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -149,95 +150,6 @@ Partial Class FrmPedido
         Me.GridCabecalho.Size = New System.Drawing.Size(1496, 501)
         Me.GridCabecalho.TabIndex = 7
         '
-        'Selecionar
-        '
-        Me.Selecionar.HeaderText = "S/N"
-        Me.Selecionar.MinimumWidth = 6
-        Me.Selecionar.Name = "Selecionar"
-        Me.Selecionar.Width = 40
-        '
-        'PedidoGerado
-        '
-        Me.PedidoGerado.DataPropertyName = "CodVenda_Gerado"
-        Me.PedidoGerado.HeaderText = "Ped.Gerado"
-        Me.PedidoGerado.MinimumWidth = 6
-        Me.PedidoGerado.Name = "PedidoGerado"
-        Me.PedidoGerado.Width = 70
-        '
-        'TxtIDLoja
-        '
-        Me.TxtIDLoja.DataPropertyName = "ID_Loja"
-        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.TxtIDLoja.DefaultCellStyle = DataGridViewCellStyle1
-        Me.TxtIDLoja.HeaderText = "IDLoja"
-        Me.TxtIDLoja.MinimumWidth = 120
-        Me.TxtIDLoja.Name = "TxtIDLoja"
-        Me.TxtIDLoja.ReadOnly = True
-        Me.TxtIDLoja.Width = 120
-        '
-        'TxtEmissao
-        '
-        Me.TxtEmissao.DataPropertyName = "Emissao"
-        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.TxtEmissao.DefaultCellStyle = DataGridViewCellStyle2
-        Me.TxtEmissao.HeaderText = "Emissão"
-        Me.TxtEmissao.MinimumWidth = 80
-        Me.TxtEmissao.Name = "TxtEmissao"
-        Me.TxtEmissao.ReadOnly = True
-        Me.TxtEmissao.Width = 80
-        '
-        'TXTCliente
-        '
-        Me.TXTCliente.DataPropertyName = "Cliente_Nome"
-        Me.TXTCliente.HeaderText = "Cliente"
-        Me.TXTCliente.MinimumWidth = 250
-        Me.TXTCliente.Name = "TXTCliente"
-        Me.TXTCliente.ReadOnly = True
-        Me.TXTCliente.Width = 250
-        '
-        'TxtCPF
-        '
-        Me.TxtCPF.DataPropertyName = "Cliente_CPF"
-        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.TxtCPF.DefaultCellStyle = DataGridViewCellStyle3
-        Me.TxtCPF.HeaderText = "CPF"
-        Me.TxtCPF.MinimumWidth = 100
-        Me.TxtCPF.Name = "TxtCPF"
-        Me.TxtCPF.ReadOnly = True
-        Me.TxtCPF.Width = 125
-        '
-        'TxtFormaPag
-        '
-        Me.TxtFormaPag.DataPropertyName = "Forma_Pag"
-        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.TxtFormaPag.DefaultCellStyle = DataGridViewCellStyle4
-        Me.TxtFormaPag.HeaderText = "FormaPag"
-        Me.TxtFormaPag.MinimumWidth = 150
-        Me.TxtFormaPag.Name = "TxtFormaPag"
-        Me.TxtFormaPag.ReadOnly = True
-        Me.TxtFormaPag.Width = 150
-        '
-        'TXTValor
-        '
-        Me.TXTValor.DataPropertyName = "Valor_Total"
-        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
-        DataGridViewCellStyle5.Format = "N2"
-        DataGridViewCellStyle5.NullValue = "0"
-        Me.TXTValor.DefaultCellStyle = DataGridViewCellStyle5
-        Me.TXTValor.HeaderText = "Valor"
-        Me.TXTValor.MinimumWidth = 6
-        Me.TXTValor.Name = "TXTValor"
-        Me.TXTValor.ReadOnly = True
-        Me.TXTValor.Width = 90
-        '
-        'ChaveAcesso
-        '
-        Me.ChaveAcesso.HeaderText = "Chave de Acesso"
-        Me.ChaveAcesso.MinimumWidth = 6
-        Me.ChaveAcesso.Name = "ChaveAcesso"
-        Me.ChaveAcesso.ReadOnly = True
-        Me.ChaveAcesso.Width = 230
-        '
         'GridItem
         '
         Me.GridItem.AllowUserToAddRows = False
@@ -255,8 +167,8 @@ Partial Class FrmPedido
         'TxtItem
         '
         Me.TxtItem.DataPropertyName = "Item"
-        DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.TxtItem.DefaultCellStyle = DataGridViewCellStyle6
+        DataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.TxtItem.DefaultCellStyle = DataGridViewCellStyle7
         Me.TxtItem.HeaderText = "Item"
         Me.TxtItem.MinimumWidth = 6
         Me.TxtItem.Name = "TxtItem"
@@ -266,8 +178,8 @@ Partial Class FrmPedido
         'TXTCodigo
         '
         Me.TXTCodigo.DataPropertyName = "CodProdutoAuto"
-        DataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.TXTCodigo.DefaultCellStyle = DataGridViewCellStyle7
+        DataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.TXTCodigo.DefaultCellStyle = DataGridViewCellStyle8
         Me.TXTCodigo.HeaderText = "Codigo"
         Me.TXTCodigo.MinimumWidth = 6
         Me.TXTCodigo.Name = "TXTCodigo"
@@ -285,8 +197,8 @@ Partial Class FrmPedido
         'TxtCodigoLoja
         '
         Me.TxtCodigoLoja.DataPropertyName = "CodProduto_Loja"
-        DataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.TxtCodigoLoja.DefaultCellStyle = DataGridViewCellStyle8
+        DataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.TxtCodigoLoja.DefaultCellStyle = DataGridViewCellStyle9
         Me.TxtCodigoLoja.HeaderText = "Codigo Loja"
         Me.TxtCodigoLoja.MinimumWidth = 120
         Me.TxtCodigoLoja.Name = "TxtCodigoLoja"
@@ -305,10 +217,10 @@ Partial Class FrmPedido
         'TxtQtde
         '
         Me.TxtQtde.DataPropertyName = "Quantidade"
-        DataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle9.Format = "N0"
-        DataGridViewCellStyle9.NullValue = "0"
-        Me.TxtQtde.DefaultCellStyle = DataGridViewCellStyle9
+        DataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle10.Format = "N0"
+        DataGridViewCellStyle10.NullValue = "0"
+        Me.TxtQtde.DefaultCellStyle = DataGridViewCellStyle10
         Me.TxtQtde.HeaderText = "Qtde"
         Me.TxtQtde.MinimumWidth = 100
         Me.TxtQtde.Name = "TxtQtde"
@@ -318,10 +230,10 @@ Partial Class FrmPedido
         'TXTUnitario
         '
         Me.TXTUnitario.DataPropertyName = "ValorUnitario"
-        DataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
-        DataGridViewCellStyle10.Format = "N2"
-        DataGridViewCellStyle10.NullValue = "0"
-        Me.TXTUnitario.DefaultCellStyle = DataGridViewCellStyle10
+        DataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        DataGridViewCellStyle11.Format = "N2"
+        DataGridViewCellStyle11.NullValue = "0"
+        Me.TXTUnitario.DefaultCellStyle = DataGridViewCellStyle11
         Me.TXTUnitario.HeaderText = "Vl. Unitario"
         Me.TXTUnitario.MinimumWidth = 80
         Me.TXTUnitario.Name = "TXTUnitario"
@@ -331,10 +243,10 @@ Partial Class FrmPedido
         'TxtTotal
         '
         Me.TxtTotal.DataPropertyName = "ValorTotal"
-        DataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
-        DataGridViewCellStyle11.Format = "N2"
-        DataGridViewCellStyle11.NullValue = "0"
-        Me.TxtTotal.DefaultCellStyle = DataGridViewCellStyle11
+        DataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        DataGridViewCellStyle12.Format = "N2"
+        DataGridViewCellStyle12.NullValue = "0"
+        Me.TxtTotal.DefaultCellStyle = DataGridViewCellStyle12
         Me.TxtTotal.HeaderText = "V.Total"
         Me.TxtTotal.MinimumWidth = 90
         Me.TxtTotal.Name = "TxtTotal"
@@ -412,6 +324,97 @@ Partial Class FrmPedido
         Me.DataFim.PromptChar = Global.Microsoft.VisualBasic.ChrW(32)
         Me.DataFim.Size = New System.Drawing.Size(95, 26)
         Me.DataFim.TabIndex = 2
+        '
+        'Selecionar
+        '
+        Me.Selecionar.HeaderText = "S/N"
+        Me.Selecionar.MinimumWidth = 6
+        Me.Selecionar.Name = "Selecionar"
+        Me.Selecionar.Width = 40
+        '
+        'PedidoGerado
+        '
+        Me.PedidoGerado.DataPropertyName = "CodVenda_Gerado"
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.PedidoGerado.DefaultCellStyle = DataGridViewCellStyle1
+        Me.PedidoGerado.HeaderText = "Ped.Gerado"
+        Me.PedidoGerado.MinimumWidth = 6
+        Me.PedidoGerado.Name = "PedidoGerado"
+        Me.PedidoGerado.Width = 70
+        '
+        'TxtIDLoja
+        '
+        Me.TxtIDLoja.DataPropertyName = "ID_Loja"
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.TxtIDLoja.DefaultCellStyle = DataGridViewCellStyle2
+        Me.TxtIDLoja.HeaderText = "IDLoja"
+        Me.TxtIDLoja.MinimumWidth = 120
+        Me.TxtIDLoja.Name = "TxtIDLoja"
+        Me.TxtIDLoja.ReadOnly = True
+        Me.TxtIDLoja.Width = 120
+        '
+        'TxtEmissao
+        '
+        Me.TxtEmissao.DataPropertyName = "Emissao"
+        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.TxtEmissao.DefaultCellStyle = DataGridViewCellStyle3
+        Me.TxtEmissao.HeaderText = "Emissão"
+        Me.TxtEmissao.MinimumWidth = 80
+        Me.TxtEmissao.Name = "TxtEmissao"
+        Me.TxtEmissao.ReadOnly = True
+        Me.TxtEmissao.Width = 80
+        '
+        'TXTCliente
+        '
+        Me.TXTCliente.DataPropertyName = "Cliente_Nome"
+        Me.TXTCliente.HeaderText = "Cliente"
+        Me.TXTCliente.MinimumWidth = 250
+        Me.TXTCliente.Name = "TXTCliente"
+        Me.TXTCliente.ReadOnly = True
+        Me.TXTCliente.Width = 250
+        '
+        'TxtCPF
+        '
+        Me.TxtCPF.DataPropertyName = "Cliente_CPF"
+        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.TxtCPF.DefaultCellStyle = DataGridViewCellStyle4
+        Me.TxtCPF.HeaderText = "CPF"
+        Me.TxtCPF.MinimumWidth = 100
+        Me.TxtCPF.Name = "TxtCPF"
+        Me.TxtCPF.ReadOnly = True
+        Me.TxtCPF.Width = 125
+        '
+        'TxtFormaPag
+        '
+        Me.TxtFormaPag.DataPropertyName = "Forma_Pag"
+        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.TxtFormaPag.DefaultCellStyle = DataGridViewCellStyle5
+        Me.TxtFormaPag.HeaderText = "FormaPag"
+        Me.TxtFormaPag.MinimumWidth = 150
+        Me.TxtFormaPag.Name = "TxtFormaPag"
+        Me.TxtFormaPag.ReadOnly = True
+        Me.TxtFormaPag.Width = 150
+        '
+        'TXTValor
+        '
+        Me.TXTValor.DataPropertyName = "Valor_Total"
+        DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        DataGridViewCellStyle6.Format = "N2"
+        DataGridViewCellStyle6.NullValue = "0"
+        Me.TXTValor.DefaultCellStyle = DataGridViewCellStyle6
+        Me.TXTValor.HeaderText = "Valor"
+        Me.TXTValor.MinimumWidth = 6
+        Me.TXTValor.Name = "TXTValor"
+        Me.TXTValor.ReadOnly = True
+        Me.TXTValor.Width = 90
+        '
+        'ChaveAcesso
+        '
+        Me.ChaveAcesso.HeaderText = "Chave de Acesso"
+        Me.ChaveAcesso.MinimumWidth = 6
+        Me.ChaveAcesso.Name = "ChaveAcesso"
+        Me.ChaveAcesso.ReadOnly = True
+        Me.ChaveAcesso.Width = 230
         '
         'FrmPedido
         '

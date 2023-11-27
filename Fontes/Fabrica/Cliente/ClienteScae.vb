@@ -66,6 +66,8 @@ Public Class ClienteScae
 
     Public Function Incluir(Lista As Cliente) As Integer Implements I_Cliente.Incluir
         Try
+            If Lista.CodCidade Is Nothing Then Lista.CodCidade = 0
+            If Lista.OBS Is Nothing Then Lista.OBS=""
             Dim StrSql As String = "Insert into tblCliente (DataCadastro,NomeCliente,Ativo,"
             StrSql += "CPF,CEP,Rua,Numero,Complemento,Bairro,Cidade,UF,email,Fone1,obs,codCidade,rg"
             StrSql += ")values("

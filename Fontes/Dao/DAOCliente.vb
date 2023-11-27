@@ -39,10 +39,10 @@ Public Class DAOCliente
             Resposta += "Rua/Av inválida."
         End If
 
-        If _Cliente.Numero.Length = 0 Then
-            If Resposta.Length > 0 Then Resposta += Chr(10)
-            Resposta += "Número inválido."
-        End If
+        'If _Cliente.Numero.Length = 0 Then
+        '    If Resposta.Length > 0 Then Resposta += Chr(10)
+        '    Resposta += "Número inválido."
+        'End If
         If _Cliente.Bairro.Length = 0 Then
             If Resposta.Length > 0 Then Resposta += Chr(10)
             Resposta += "Bairro Inválido."
@@ -73,18 +73,28 @@ Public Class DAOCliente
                 End If
             End If
         End If
-        If _Cliente.RG.Length = 0 Then
-            If Resposta.Length > 0 Then Resposta += Chr(10)
-            Resposta += "RG Inválido."
-        End If
+        'If _Cliente.RG IsNot Nothing Then
+        '    If _Cliente.RG.Length = 0 Then
+        '        If Resposta.Length > 0 Then Resposta += Chr(10)
+        '        Resposta += "RG Inválido."
+        '    End If
+        'End If
+
         If _Cliente.fone1.Replace(".", "").Replace("-", "").Replace("_", "").Length < 8 Then
             If Resposta.Length > 0 Then Resposta += Chr(10)
             Resposta += "Telefone Inválido."
         End If
-        If _Cliente.Email.Length = 0 OrElse (Not _Cliente.Email.Contains("@")) Then
-            If Resposta.Length > 0 Then Resposta += Chr(10)
-            Resposta += "E-mail Inválido."
+        If _Cliente.Email IsNot Nothing Then
+
+            If _Cliente.Email.Length < 2 OrElse (Not _Cliente.Email.Contains("@")) Then
+                If _Cliente.Email.Length > 1 Then
+                    If Resposta.Length > 0 Then Resposta += Chr(10)
+                    Resposta += "E-mail Inválido."
+                End If
+
+            End If
         End If
+
         Return Resposta
     End Function
     Private Function CPF_Já_Cadastrado(CPF As String, codCliente As Integer) As Boolean

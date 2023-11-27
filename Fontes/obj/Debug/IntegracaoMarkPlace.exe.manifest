@@ -50,19 +50,19 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>jNo8L/CvD+qT3YJnsc8qk5lq/auHbXDpTQWwgT92eWQ=</dsig:DigestValue>
+        <dsig:DigestValue>bpT+gRuWXElwr9PrydKVLZ1fQohgCKkxSbRSl6EtyEE=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="IntegracaoMarkPlace.exe" size="806328">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="IntegracaoMarkPlace.exe" size="807352">
       <assemblyIdentity name="IntegracaoMarkPlace" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>CeVLB5r9FeKlmk7BseSsdlBsbo95NN0/fw5xf9AtRFo=</dsig:DigestValue>
+        <dsig:DigestValue>MPmAA4l7VrCuavEuHG5Ti4VvdHOyPT/CfZPJpOJtc0c=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -1386,13 +1386,13 @@
       </hash>
     </dependentAssembly>
   </dependency>
-  <file name="DDL\Tabelas.sql" size="5690196">
+  <file name="DDL\Tabelas.sql" size="5693133">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>2OPddh17RjpMfGIS9hAdYVZHTMIm+ESXnEsDO6gs+ok=</dsig:DigestValue>
+      <dsig:DigestValue>WqSqFiicl6oni3gB68plcth+bsLaJC7pd8iqk4HeGME=</dsig:DigestValue>
     </hash>
   </file>
   <file name="IntegracaoMarkPlace.exe.config" size="18662">

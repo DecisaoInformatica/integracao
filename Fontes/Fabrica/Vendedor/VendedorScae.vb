@@ -39,7 +39,7 @@ Public Class VendedorScae
         Try
             Dim StrSql As String = "Insert into tblFuncionario (NomeFunc,Orcamento,Ativo"
             StrSql += ")values("
-            StrSql += "'" & Lista.Nome & "',true,true)"
+            StrSql += "'" & Lista.Nome & "',True,True)"
             ClAcesso = AcessoDados.AcessoAdoNet.Inicia
             ClAcesso.NomeProjeto = Sistema_Implementado
             Dim Afetados As Integer = ClAcesso.ExecutaSql(StrSql)

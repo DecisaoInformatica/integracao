@@ -49,6 +49,11 @@
         GridCabecalho.AutoGenerateColumns = False
         GridCabecalho.DataSource = Lista_Cabeçalho
         GridCabecalho.Refresh()
+        For i = 0 To GridCabecalho.Rows.Count - 1
+            If IsNumeric(GridCabecalho.Rows(i).Cells(1).Value) Then
+                PintaLinha(i, Color.GreenYellow, True)
+            End If
+        Next
     End Sub
     Sub GeraGrid_Itens(Lista_Itens As List(Of VendaDados))
         GridItem.AutoGenerateColumns = False
@@ -151,7 +156,7 @@
             Dim Lista_Vendedor As New List(Of PVendedor)
             Dim Lista_Cliente As New List(Of Cliente)
             Dim ClienteID As Integer = 0
-
+            Dim Linha_Atual As Integer = 0
             Dim DaoV As New DAOVendedor
             Lista_Vendedor = DaoV.Retorna_Vendedor(Plataforma.Text)
             If Lista_Vendedor.Count = 0 Then
@@ -163,6 +168,7 @@
             End If
 
             For Each Linha As DataGridViewRow In GridCabecalho.Rows
+                Linha_Atual = Linha.Index
                 Selecionado = Linha.Cells(0).Value
                 If Selecionado Then
                     PedidoID = Linha.Cells(2).Value.ToString
@@ -173,9 +179,13 @@
                             ClienteID = Grava_Dados_Cliente(PedidoID)
                             Lista_Cliente = Get_Cliente(PedidoID)
                         End If
-                        If Lista_Cliente.Count > 0 And Lista_Vendedor.Count > 0 Then
-                            If Not Grava_Venda(PedidoID, Plataforma.Text, Lista_Cliente, Lista_Vendedor) Then
+                        If Lista_Cliente.Count > 0 AndAlso Lista_Vendedor.Count > 0 Then
+                            Dim Resposta_Gravar_Venda As (Boolean, Integer) = Grava_Venda(PedidoID, Plataforma.Text, Lista_Cliente, Lista_Vendedor)
+                            If Not Resposta_Gravar_Venda.Item1 OrElse Resposta_Gravar_Venda.Item2 = 0 Then
                                 MsgBox("Não foi possível processar o pedido: " & PedidoID & ". Tente novamente após a conclusão.", vbInformation, "Atenção")
+                            Else
+                                Linha.Cells(1).Value = Resposta_Gravar_Venda.Item2
+                                PintaLinha(Linha_Atual, Color.GreenYellow, True)
                             End If
                         End If
                     End If
@@ -184,6 +194,12 @@
         Catch ex As Exception
         Finally
         End Try
+    End Sub
+    Sub PintaLinha(LinhaAtual As Integer, Cor As Color, Optional LetraBranca As Boolean = False)
+        For a = 0 To GridCabecalho.Columns.Count - 1
+            GridCabecalho.Rows(LinhaAtual).Cells(a).Style.BackColor = Cor
+            'If LetraBranca Then GridCabecalho.Rows(LinhaAtual).Cells("Resposta").Style.ForeColor = Color.White
+        Next
     End Sub
     Private Function Valida_Pedido(PedidoID As String) As Boolean
         Dim Resp As Boolean = True
@@ -252,9 +268,12 @@
                 List.Rua = listaFiltrada(0).Cliente_Endereço.full_address & ""
                 List.Numero = ""
                 List.Complemento = ""
+                List.RG = ""
+                List.Email = ""
                 List.UF = listaFiltrada(0).Cliente_Endereço.state & ""
                 Dim DaoC As New DAOCliente
-                IdCliente = List.CodCliente = DaoC.Incluir(List)
+                List.CodCliente = DaoC.Incluir(List)
+                IdCliente = List.CodCliente
             End If
         Catch ex As Exception
         Finally
@@ -262,8 +281,8 @@
         Return IdCliente
     End Function
     Private Function Grava_Venda(PedidoLojaID As String, LcPlataforma As String, Lista_Cliente As List(Of Cliente),
-                                 Lista_Vendedor As List(Of PVendedor)) As Boolean
-        Dim Resposta As Boolean = False
+                                 Lista_Vendedor As List(Of PVendedor)) As (Boolean, Integer)
+        Dim Resposta As (Boolean, Integer)
         Try
             Dim listaFiltrada As List(Of VendaCabecalho) = lista_Venda.FindAll(Function(p As VendaCabecalho) p.ID_Loja = PedidoLojaID)
             If listaFiltrada.Count > 0 Then
@@ -303,11 +322,11 @@
                         Lista_Venda_Item.CodFornecedor = ListaP(0).CodFornecedor
                         Lista_Venda_Item.CodVendaItem = DaoV.Incluir_Item(Lista_Venda_Item)
                     Next
-                    Resposta = True
+                    Resposta = (True, Lista_Venda.CodVenda)
                 End If
             End If
         Catch ex As Exception
-            Resposta = False
+            Resposta = (False, 0)
         Finally
         End Try
 

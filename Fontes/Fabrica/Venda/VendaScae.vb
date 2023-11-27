@@ -53,6 +53,7 @@ Public Class VendaScae
     End Function
     Private Function Recupera_NumeroVenda() As Integer
         Dim Resp As Integer = 0
+        Dim Existe As Boolean = False
         Try
             Dim StrSql As String = "Select * FROM numerovenda"
             ClAcesso = AcessoDados.AcessoAdoNet.Inicia
@@ -61,11 +62,18 @@ Public Class VendaScae
                 If Dr.Tables(0).Rows.Count > 0 Then
                     Resp = CInt(Dr.Tables(0).Rows(0).Item("Numero"))
                     Resp += 1
+                    Existe = True
+                Else
+                    Resp += 1
                 End If
                 If Not ClAcesso.TransacaoEstaAtiva Then ClAcesso.FechaConexao()
             End Using
+            If Existe Then
+                StrSql = "update NumeroVenda set Numero=" & Resp
+            Else
+                StrSql = "insert into NumeroVenda (Numero,CodUsuario,numerorota)values(" & Resp.ToString & ",'0','0')"
+            End If
 
-            StrSql = "update NumeroVenda set Numero=[Numero] + 1"
             Dim Afetados As Integer = ClAcesso.ExecutaSql(StrSql)
         Catch ex As Exception
         Finally
